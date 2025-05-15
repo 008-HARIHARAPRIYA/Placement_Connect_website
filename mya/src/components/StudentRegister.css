@@ -1,0 +1,78 @@
+/* Container Styling */
+.student-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+
+/* Form Card Styling */
+.student-card {
+  
+  padding: 20px;
+  background: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 250px;
+}
+
+/* Form Styling */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+/* Input Field Styling */
+.student-form input,
+.student-form textarea {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+.student-button {
+  width: 50%;
+  padding: 10px;
+  background-color: #021a31;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.student-button:hover {
+  background-color: #8d9fb0;
+}
+
+/* Title Styling */
+.student-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Link Styling */
+.student-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.student-link .link-button {
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.student-link .link-button:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,72 @@
+/* Container Styling */
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Added subtle background for better visibility */
+}
+
+/* Form Card Styling */
+.admin-card {
+  width: 350px;
+  padding: 20px;
+  background: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Form Styling */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Field Styling */
+.admin-form input {
+  width: 100%; /* Ensures consistent full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+/* Button Styling */
+.admin-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #021a31;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-button:hover {
+  background-color: #8d9fb0;
+}
+
+/* Title Styling */
+.admin-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Link Styling */
+.admin-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.admin-link a {
+  text-decoration: none;
+  color: #1976d2;
+}
+
+.admin-link a:hover {
+  text-decoration: underline;
+}

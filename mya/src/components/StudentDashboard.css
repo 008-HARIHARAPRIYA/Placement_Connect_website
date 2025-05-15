@@ -1,0 +1,102 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  
+}
+
+.student-card {
+  width: 50%;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.student-card h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.student-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.company-section {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.application-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+.application-form input,
+.application-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.application-form .add-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.application-table {
+  width: 100%;
+  text-align: center;
+}
+
+.application-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.application-table th, .application-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.application-table th {
+  background-color: #ea00ff;
+  color: white;
+}
+
+.application-table tr {
+  background-color: #d4eaf35d;
+  color: rgb(255, 254, 254);
+}
+
+.student-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.student-card strong {
+  background-color: #f0f8ff; /* Light blue background */
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
