@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 // Add these lines for Dialogflow support
 const dialogflow = require('@google-cloud/dialogflow');
 const fs = require('fs');
-const PROJECT_ID ='my-application-2ea8d';
+const PROJECT_ID ='your project id';
 const SESSION_ID = '123456'; // You can generate a unique session ID per user if needed
 const CREDENTIALS = JSON.parse(fs.readFileSync('dialogflow-key.json'));
 
