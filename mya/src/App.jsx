@@ -57,7 +57,9 @@ const Chatbot = () => {
     setChat((prevChat) => [...prevChat, userMessage]);
 
     try {
-      const response = await axios.post("http://localhost:8001/chatbot", { message });
+      // const response = await axios.post("http://localhost:8001/chatbot", { message });
+      const response = await axios.post("https://placement-connect-website-1.onrender.com/chatbot", { message });
+
       const botMessage = { sender: "bot", text: response.data.response };
       setChat((prevChat) => [...prevChat, botMessage]);
     } catch (error) {

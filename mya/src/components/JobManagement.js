@@ -35,7 +35,9 @@ const JobManagement = () => {
   const fetchJobs = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:8001/admin/jobs");
+      // const response = await axios.get("http://localhost:8001/admin/jobs");
+      const response = await axios.get("https://placement-connect-website-1.onrender.com/admin/jobs");
+
       setJobs(response.data);
     } catch (err) {
       setError("Failed to fetch job listings.");
@@ -57,7 +59,9 @@ const JobManagement = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:8001/admin/jobs", newJob);
+      // await axios.post("http://localhost:8001/admin/jobs", newJob);
+      await axios.post("https://placement-connect-website-1.onrender.com/admin/jobs", newJob);
+
       fetchJobs();
       setNewJob({ title: "", description: "", experience: "", skills: "", recruiterEmail: "" });
     } catch (err) {
@@ -70,7 +74,9 @@ const JobManagement = () => {
   const deleteJob = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:8001/admin/jobs/${id}`);
+      // await axios.delete(`http://localhost:8001/admin/jobs/${id}`);
+      await axios.delete(`https://placement-connect-website-1.onrender.com/admin/jobs/${id}`);
+
       fetchJobs();
     } catch (err) {
       setError("Failed to delete job.");

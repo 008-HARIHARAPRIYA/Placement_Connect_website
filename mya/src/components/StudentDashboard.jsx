@@ -32,7 +32,9 @@ const StudentDashboard = () => {
 
     try {
       setIsFetchingCompanies(true);
-      const response = await fetch(`http://localhost:8001/student/dashboard/${studentId}`);
+      // const response = await fetch(`http://localhost:8001/student/dashboard/${studentId}`);
+      const response = await fetch(`https://placement-connect-website-1.onrender.com/student/dashboard/${studentId}`);
+
       const data = await response.json();
 
       if (response.ok) {
@@ -51,7 +53,9 @@ const StudentDashboard = () => {
 
   const fetchAdminJobs = async () => {
     try {
-      const response = await fetch('http://localhost:8001/admin/jobs');
+      // const response = await fetch('http://localhost:8001/admin/jobs');
+      const response = await fetch('https://placement-connect-website-1.onrender.com/admin/jobs');
+
       const data = await response.json();
 
       if (response.ok) {
@@ -76,11 +80,17 @@ const StudentDashboard = () => {
 
     const studentId = localStorage.getItem('studentid');
     try {
-      const response = await fetch(`http://localhost:8001/student/${studentId}/companyDetails`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newCompany),
-      });
+      // const response = await fetch(`http://localhost:8001/student/${studentId}/companyDetails`, {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(newCompany),
+      // });
+      const response = await fetch(`https://placement-connect-website-1.onrender.com/student/${studentId}/companyDetails`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(newCompany),
+});
+
 
       if (!response.ok) {
         const data = await response.json();

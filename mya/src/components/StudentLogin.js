@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Container, TextField, Button, Typography } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
 const StudentLogin = () => {
   const [studentid, setStudentid] = useState('');  // State for Student ID
   const [spassword, setSpassword] = useState('');  // State for Student Password
@@ -12,7 +11,9 @@ const StudentLogin = () => {
   const handleLogin = async () => {
     try {
       // Send request to the backend for student login
-      const response = await axios.post('http://localhost:8001/registration/studentlogin', { studentid, spassword });
+      // const response = await axios.post('http://localhost:8001/registration/studentlogin', { studentid, spassword });
+      const response = await axios.post('https://placement-connect-website-1.onrender.com/registration/studentlogin', { studentid, spassword });
+
       alert(response.data.message);  // Display success message
 
       // Navigate to the student's dashboard or another page on successful login

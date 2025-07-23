@@ -34,7 +34,9 @@ const StudentRegister = () => {
     const studentData = { studentid, studentname, spassword, skills: skillsArray, saddress, cgpa };
 
     try {
-      const response = await axios.post('http://localhost:8001/registration/studentsignup', studentData);
+      // const response = await axios.post('http://localhost:8001/registration/studentsignup', studentData);
+      const response = await axios.post('https://placement-connect-website-1.onrender.com/registration/studentsignup', studentData);
+
 
       if (response.data.message === "Student registered successfully") {
         alert(response.data.message);

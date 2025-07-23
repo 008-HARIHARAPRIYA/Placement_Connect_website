@@ -41,7 +41,9 @@ function AdminDashboard() {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.get("http://localhost:8001/admin/students");
+      //const response = await axios.get("http://localhost:8001/admin/students");
+      const response = await axios.get("https://placement-connect-website-1.onrender.com/admin/students");
+
       setStudents(response.data);
       setFilteredStudents(response.data);
     } catch (err) {

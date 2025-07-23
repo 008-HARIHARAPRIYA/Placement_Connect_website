@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './admincss.css';
+const BASE_URL = 'https://placement-connect-website-1.onrender.com';
 
 const AdminRegister = () => {
   const [isLogin, setIsLogin] = useState(true); // State to toggle between login and registration
@@ -20,10 +21,12 @@ const AdminRegister = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isLogin
-      ? 'http://localhost:8001/admin/login'
-      : 'http://localhost:8001/admin/register';
-
+    // const url = isLogin
+    //   ? 'http://localhost:8001/admin/login'
+    //   : 'http://localhost:8001/admin/register';
+const url = isLogin
+  ? `${BASE_URL}/admin/login`
+  : `${BASE_URL}/admin/register`;
     const payload = isLogin
       ? { adminid: formData.adminid, apassword: formData.apassword }
       : formData;

@@ -15,7 +15,9 @@ const AdminLogin = () => {
       console.log("Password: ", apassword);  // Log Password
 
       // Send request to the backend for admin login
-      const response = await axios.post('http://localhost:8001/registration/adminlogin', { adminid, apassword });
+      // const response = await axios.post('http://localhost:8001/registration/adminlogin', { adminid, apassword });
+      const response = await axios.post('https://placement-connect-website-1.onrender.com/registration/adminlogin', { adminid, apassword });
+
       console.log("Response from backend:", response.data);  // Log response data
       alert(response.data.message);
 

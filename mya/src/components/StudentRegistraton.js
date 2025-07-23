@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './StudentRegister.css';
+const BASE_URL = 'https://placement-connect-website-1.onrender.com';
 
 const StudentRegister = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -27,9 +28,13 @@ const StudentRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const url = isLogin
-      ? 'http://localhost:8001/student/login'
-      : 'http://localhost:8001/student/register';
+const url = isLogin
+  ? `${BASE_URL}/student/login`
+  : `${BASE_URL}/student/register`;
+
+    // const url = isLogin
+    //   ? 'http://localhost:8001/student/login'
+    //   : 'http://localhost:8001/student/register';
 
     const payload = isLogin
       ? {
