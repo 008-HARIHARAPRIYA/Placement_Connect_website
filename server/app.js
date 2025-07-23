@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const PROJECT_ID = 'my-application-2ea8d';
+const PROJECT_ID = 'flawless-earth-440006-c6';
 const SESSION_ID = '123456'; // Use unique session ID for each user
 const CREDENTIALS = JSON.parse(fs.readFileSync('dialogflow-key.json'));
 
@@ -330,7 +330,6 @@ async function sendToDialogflow(message) {
   };
 
   const responses = await sessionClient.detectIntent(request);
-  console.log('Dialogflow response:', responses[0].queryResult.fulfillmentText); // Log the response
   return responses[0].queryResult.fulfillmentText;
 }
 

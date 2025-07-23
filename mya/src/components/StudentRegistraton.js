@@ -28,8 +28,8 @@ const StudentRegister = () => {
     e.preventDefault();
 
     const url = isLogin
-      ? 'http://localhost:5000/student/login'
-      : 'http://localhost:5000/student/register';
+      ? 'http://localhost:8001/student/login'
+      : 'http://localhost:8001/student/register';
 
     const payload = isLogin
       ? {

@@ -32,7 +32,7 @@ const StudentDashboard = () => {
 
     try {
       setIsFetchingCompanies(true);
-      const response = await fetch(`http://localhost:5000/student/dashboard/${studentId}`);
+      const response = await fetch(`http://localhost:8001/student/dashboard/${studentId}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -76,7 +76,7 @@ const StudentDashboard = () => {
 
     const studentId = localStorage.getItem('studentid');
     try {
-      const response = await fetch(`http://localhost:5000/student/${studentId}/companyDetails`, {
+      const response = await fetch(`http://localhost:8001/student/${studentId}/companyDetails`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newCompany),

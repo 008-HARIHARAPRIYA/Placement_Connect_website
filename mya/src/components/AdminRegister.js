@@ -21,8 +21,8 @@ const AdminRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = isLogin
-      ? 'http://localhost:5000/admin/login'
-      : 'http://localhost:5000/admin/register';
+      ? 'http://localhost:8001/admin/login'
+      : 'http://localhost:8001/admin/register';
 
     const payload = isLogin
       ? { adminid: formData.adminid, apassword: formData.apassword }

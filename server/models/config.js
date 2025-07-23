@@ -14,5 +14,5 @@ const adminSchema = new mongoose.Schema({
   apassword: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
-const Admin = mongoose.model('Admin', adminSchema);
+const Admin = mongoose.model('Admindash', adminSchema);
 module.exports=Admin;

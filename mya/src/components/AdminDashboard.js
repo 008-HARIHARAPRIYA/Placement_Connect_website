@@ -41,7 +41,7 @@ function AdminDashboard() {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.get("http://localhost:5000/admin/students");
+      const response = await axios.get("http://localhost:8001/admin/students");
       setStudents(response.data);
       setFilteredStudents(response.data);
     } catch (err) {
