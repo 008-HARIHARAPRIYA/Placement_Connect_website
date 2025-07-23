@@ -11,13 +11,13 @@ const StudentLogin = () => {
   // Handle login logic
   const handleLogin = async () => {
     try {
-      // Correct backend endpoint
-      const response = await axios.post('http://localhost:8001/student/login', { studentid, spassword });
-      alert(response.data.message);
+      // Send request to the backend for student login
+      const response = await axios.post('http://localhost:8001/registration/studentlogin', { studentid, spassword });
+      alert(response.data.message);  // Display success message
 
-      // Navigate to dashboard with studentid as param or state
+      // Navigate to the student's dashboard or another page on successful login
       if (response.data.message === "Login successful") {
-        navigate(`/StudentDashboard/${studentid}`); // Use route matching StudentDashboard.js
+        navigate('/student/dashboard');  // Replace with actual dashboard path
       }
     } catch (error) {
       console.error("Error:", error.response?.data || error);  // Log errors

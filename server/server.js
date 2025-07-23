@@ -6,18 +6,19 @@ const bodyParser = require("body-parser");
 // Add these lines for Dialogflow support
 const dialogflow = require('@google-cloud/dialogflow');
 const fs = require('fs');
-const PROJECT_ID ='your project id';
+const PROJECT_ID = 'your-dialogflow-project-id'; // Replace with your actual Dialogflow project ID
 const SESSION_ID = '123456'; // You can generate a unique session ID per user if needed
-const CREDENTIALS = JSON.parse(fs.readFileSync('dialogflow-key.json'));
+//const CREDENTIALS = JSON.parse(fs.readFileSync('dialogflow-key.json'));
+const CREDENTIALS =JSON.parse(process.env.DIALOGFLOW_CREDENTIALS); // Use environment variable for credentials
 
 const app = express();
 const port = 8001; // Port fixed
-require('dotenv').config(); // Load environment variables
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect("mongodb+srv://hariharapriya6:ZYMIEVPjRNoiegtM@Placementdb.2c05i6m.mongodb.net/admini?retryWrites=true&w=majority&appName=Placementdb", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
